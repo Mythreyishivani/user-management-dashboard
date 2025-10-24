@@ -29,18 +29,24 @@ function Dashboard() {
 
   return (
     <div className="dashboard-container">
-      
-      {/* White strip heading */}
-      <div className="dashboard-header-strip">
-        User Management Dashboard
-      </div>
-
       <div className="dashboard-card">
+        {/* White strip behind heading */}
+        <div className="dashboard-header">
+          <h2 className="text-center text-primary fw-bold">
+            User Management Dashboard
+          </h2>
+        </div>
+
         <div className="mb-3 text-end">
           <Link className="btn btn-success" to="/create">
             ➕ Add New User
           </Link>
         </div>
+
+
+
+
+        
 
         <div className="table-responsive">
           <table className="table table-striped table-bordered align-middle shadow-sm">
@@ -69,21 +75,21 @@ function Dashboard() {
                     <td>{user.company}</td>
                     <td>
                       <button
-                        className="btn btn-outline-primary btn-sm me-2"
+                        className="icon-btn text-primary me-2"
                         onClick={() => handleView(user.id)}
                         title="View User"
                       >
                         <FaEye />
                       </button>
                       <button
-                        className="btn btn-outline-success btn-sm me-2"
+                        className="icon-btn text-success me-2"
                         onClick={() => handleEdit(user.id)}
                         title="Edit User"
                       >
                         <FaEdit />
                       </button>
                       <button
-                        className="btn btn-outline-danger btn-sm"
+                        className="icon-btn text-danger"
                         onClick={() => handleDelete(user.id)}
                         title="Delete User"
                       >

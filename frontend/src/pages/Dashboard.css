@@ -8,3 +8,48 @@
   box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* subtle shadow */
   margin-bottom: 20px;           /* space below */
 }
+/* White strip behind heading */
+.dashboard-header {
+  background-color: rgb(203, 196, 223);
+  padding: 10px 0;
+  border-radius: 6px;
+  margin-bottom: 20px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+/* Remove border and background for icons */
+.icon-btn {
+  background: none;
+  border: none;
+  padding: 5px;
+  cursor: pointer;
+  font-size: 1.2rem;
+  transition: transform 0.2s ease, color 0.2s ease;
+}
+
+/* Hover effect for better UI */
+.icon-btn:hover {
+  transform: scale(1.2);
+  opacity: 0.8;
+}
+.btn-success {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 6px !important;
+  color: #fff !important;  /* Force white color */
+  font-weight: 500;
+}
+
+.btn-success:hover {
+  background-color: #218838 !important; /* darker hover */
+  color: #fff !important;
+}
+
+.btn-success:focus,
+.btn-success:active {
+  color: #fff !important;
+  box-shadow: none !important;
+}
+.dashboard-header h2 {
+  color: black !important;
+}
