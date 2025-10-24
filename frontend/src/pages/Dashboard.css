@@ -1,0 +1,10 @@
+.dashboard-header-strip {
+  background-color: rgb(201, 179, 179);       /* white strip */
+  width: 100%;                   /* full width */
+  padding: 15px 0;               /* vertical padding */
+  text-align: center;            /* center the text */
+  font-size: 1.8rem;
+  font-weight: bold;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* subtle shadow */
+  margin-bottom: 20px;           /* space below */
+}
