@@ -168,9 +168,12 @@ function CreateUser() {
           </div>
         </div>
 
-        <button type="submit" className="btn btn-success w-100 mt-3">
-          Add User
-        </button>
+        {/* Small centered button */}
+        <div className="text-center mt-3">
+          <button type="submit" className="btn btn-success px-4">
+            Add User
+          </button>
+        </div>
       </form>
     </div>
   );

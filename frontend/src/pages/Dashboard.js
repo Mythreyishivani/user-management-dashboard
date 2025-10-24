@@ -39,7 +39,7 @@ function Dashboard() {
 
         <div className="mb-3 text-end">
           <Link className="btn btn-success" to="/create">
-            ➕ Add New User
+             Add New User
           </Link>
         </div>
 
