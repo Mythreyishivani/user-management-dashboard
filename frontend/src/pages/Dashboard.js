@@ -32,21 +32,19 @@ function Dashboard() {
       <div className="dashboard-card">
         {/* White strip behind heading */}
         <div className="dashboard-header">
-          <h2 className="text-center text-primary fw-bold">
+          <h2
+            className="text-center"
+            style={{ color: "white", fontWeight: "normal" }}
+          >
             User Management Dashboard
           </h2>
         </div>
 
         <div className="mb-3 text-end">
-          <Link className="btn btn-success" to="/create">
-             Add New User
+          <Link className="btn btn-primary" to="/create">
+            Add New User
           </Link>
         </div>
-
-
-
-
-        
 
         <div className="table-responsive">
           <table className="table table-striped table-bordered align-middle shadow-sm">
