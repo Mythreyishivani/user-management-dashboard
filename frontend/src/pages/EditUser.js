@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { useNavigate, useParams } from "react-router-dom";
+import "./Dashboard.css"; // Ensure this is imported for header styling
 
 function EditUser() {
   const { id } = useParams();
@@ -66,77 +67,95 @@ function EditUser() {
   };
 
   return (
-    <div className="card shadow p-4 mx-auto mt-5" style={{ maxWidth: "900px", backgroundColor: "white" }}>
-      <h3 className="text-center text-warning mb-4">Edit User</h3>
-      <form onSubmit={handleSubmit}>
-        <div className="row">
-          {/* Left column: User info */}
-          <div className="col-md-6">
-            <div className="mb-3">
-              <label className="form-label">Name</label>
-              <input type="text" name="name" className="form-control" value={form.name} onChange={handleChange} required />
-            </div>
+    <div>
+      {/* Dashboard header on top */}
+      <div className="dashboard-header">
+        <h2 className="text-center" style={{ color: "white", fontWeight: "normal" }}>
+          User Management Dashboard
+        </h2>
+      </div>
 
-            <div className="mb-3">
-              <label className="form-label">Email</label>
-              <input type="email" name="email" className="form-control" value={form.email} onChange={handleChange} required />
-            </div>
-
-            <div className="mb-3">
-              <label className="form-label">Phone</label>
-              <input type="text" name="phone" className="form-control" value={form.phone} onChange={handleChange} required />
-            </div>
-
-            <div className="mb-3">
-              <label className="form-label">Company</label>
-              <input type="text" name="company" className="form-control" value={form.company} onChange={handleChange} />
-            </div>
-
-            <div className="mb-3">
-              <label className="form-label">Job Title</label>
-              <input type="text" name="title" className="form-control" value={form.title} onChange={handleChange} />
-            </div>
-
-            <div className="mb-3">
-              <label className="form-label">Department</label>
-              <input type="text" name="department" className="form-control" value={form.department} onChange={handleChange} />
-            </div>
-          </div>
-
-          {/* Right column: Address */}
-          <div className="col-md-6">
-            <h5>Address</h5>
-            <div className="mb-3">
-              <label className="form-label">Street</label>
-              <input type="text" name="street" className="form-control" value={form.address.street} onChange={handleAddressChange} />
-            </div>
-
-            <div className="mb-3">
-              <label className="form-label">City</label>
-              <input type="text" name="city" className="form-control" value={form.address.city} onChange={handleAddressChange} />
-            </div>
-
-            <div className="mb-3">
-              <label className="form-label">Zip</label>
-              <input type="text" name="zip" className="form-control" value={form.address.zip} onChange={handleAddressChange} />
-            </div>
-
-            <h6>Geo Coordinates</h6>
+      {/* Form card below header */}
+      <div
+        className="d-flex justify-content-center align-items-center"
+        style={{ minHeight: "90vh", backgroundColor: "#f8f9fa", padding: "20px" }}
+      >
+        <div className="card shadow p-4 w-100" style={{ maxWidth: "900px", backgroundColor: "white" }}>
+          <h3 className="text-center mb-4" style={{ color: "#0d6efd" }}>Edit User</h3>
+          <form onSubmit={handleSubmit}>
             <div className="row">
-              <div className="col-6 mb-3">
-                <label className="form-label">Latitude</label>
-                <input type="text" name="lat" className="form-control" value={form.address.geo.lat} onChange={handleGeoChange} />
+              <div className="col-md-6">
+                <div className="mb-3">
+                  <label className="form-label">Name</label>
+                  <input type="text" name="name" className="form-control" value={form.name} onChange={handleChange} required />
+                </div>
+                <div className="mb-3">
+                  <label className="form-label">Email</label>
+                  <input type="email" name="email" className="form-control" value={form.email} onChange={handleChange} required />
+                </div>
+                <div className="mb-3">
+                  <label className="form-label">Phone</label>
+                  <input type="text" name="phone" className="form-control" value={form.phone} onChange={handleChange} required />
+                </div>
+                <div className="mb-3">
+                  <label className="form-label">Company</label>
+                  <input type="text" name="company" className="form-control" value={form.company} onChange={handleChange} />
+                </div>
+                <div className="mb-3">
+                  <label className="form-label">Job Title</label>
+                  <input type="text" name="title" className="form-control" value={form.title} onChange={handleChange} />
+                </div>
+                <div className="mb-3">
+                  <label className="form-label">Department</label>
+                  <input type="text" name="department" className="form-control" value={form.department} onChange={handleChange} />
+                </div>
               </div>
-              <div className="col-6 mb-3">
-                <label className="form-label">Longitude</label>
-                <input type="text" name="lng" className="form-control" value={form.address.geo.lng} onChange={handleGeoChange} />
+
+              <div className="col-md-6">
+                <h5>Address</h5>
+                <div className="mb-3">
+                  <label className="form-label">Street</label>
+                  <input type="text" name="street" className="form-control" value={form.address.street} onChange={handleAddressChange} />
+                </div>
+                <div className="mb-3">
+                  <label className="form-label">City</label>
+                  <input type="text" name="city" className="form-control" value={form.address.city} onChange={handleAddressChange} />
+                </div>
+                <div className="mb-3">
+                  <label className="form-label">Zip</label>
+                  <input type="text" name="zip" className="form-control" value={form.address.zip} onChange={handleAddressChange} />
+                </div>
+                <h6>Geo Coordinates</h6>
+                <div className="row">
+                  <div className="col-6 mb-3">
+                    <label className="form-label">Latitude</label>
+                    <input type="text" name="lat" className="form-control" value={form.address.geo.lat} onChange={handleGeoChange} />
+                  </div>
+                  <div className="col-6 mb-3">
+                    <label className="form-label">Longitude</label>
+                    <input type="text" name="lng" className="form-control" value={form.address.geo.lng} onChange={handleGeoChange} />
+                  </div>
+                </div>
               </div>
             </div>
-          </div>
-        </div>
 
-        <button type="submit" className="btn btn-warning mt-3 w-50 d-block mx-auto">Update User</button>
-      </form>
+            <div className="text-center mt-3">
+              <button
+                type="submit"
+                className="btn"
+                style={{
+                  backgroundColor: "#0d6efd",
+                  color: "white",
+                  width: "200px",
+                  padding: "10px 0",
+                }}
+              >
+                Update User
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
     </div>
   );
 }

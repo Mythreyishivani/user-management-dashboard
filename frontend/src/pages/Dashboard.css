@@ -11,7 +11,7 @@
 
 /* White strip behind heading */
 .dashboard-header {
-  background-color: rgb(203, 196, 223);
+  background-color: #0d6efdff;
   padding: 10px 0;
   width: 100vw;                              /* full viewport width */
   margin-left: calc(-50vw + 50%);            /* center the full-width strip */
@@ -54,7 +54,10 @@
 }
 
 .dashboard-header h2 {
-  color: black !important;
+  color: white !important;
+  font-weight: normal !important;
+  font-family: sans-serif !important;
   margin: 0;
   text-align: center;
 }
+
