@@ -4,7 +4,7 @@ const bcrypt = require('bcryptjs');
 // GET all users
 exports.getUsers = async (req, res) => {
     try {
-        const users = await User.findAll({ attributes: { exclude: ['password'] } });
+        const users = await User.findAll({ attributes: {}});
         res.json(users);
     } catch (err) {
         res.status(500).json({ message: err.message });
@@ -14,18 +14,19 @@ exports.getUsers = async (req, res) => {
 // POST create a new user
 exports.createUser = async (req, res) => {
     try {
-        const { name, email, password, phone, company, address } = req.body;
+        console.log("Request Body:", req.body); // Debugging line
+        const { name, email, phone, company, address } = req.body;
 
-        if (!name || !email || !password) {
-            return res.status(400).json({ message: 'Name, email, and password are required' });
+        if (!name || !email || !phone) {
+            return res.status(400).json({ message: 'Name, email, and phone are required' });
         }
 
-        const hashedPassword = await bcrypt.hash(password, 10);
+
 
         const newUser = await User.create({
             name,
             email,
-            password: hashedPassword,
+
             phone: phone || 'N/A', // default if not provided
             company: company || null,
             address: address || null, // address should be JSON: {street, city, zipcode, geo:{lat,lng}}
@@ -49,7 +50,7 @@ exports.createUser = async (req, res) => {
 // GET single user by ID
 exports.getUserById = async (req, res) => {
     try {
-        const user = await User.findByPk(req.params.id, { attributes: { exclude: ['password'] } });
+        const user = await User.findByPk(req.params.id, { attributes: {} });
         if (!user) return res.status(404).json({ message: 'User not found' });
         res.json(user);
     } catch (err) {
