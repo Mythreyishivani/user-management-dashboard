@@ -1,38 +1,83 @@
-.App {
-  text-align: center;
+/* Make the background image cover the entire screen */
+body, html {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  background: url('../assets/bg.jpg') no-repeat center center fixed;
+  background-size: cover;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/* Container for table and button */
+.container {
+  width: 95%;
+  max-width: 1200px;
+  margin: 20px auto; /* Center container */
+  padding: 20px;
+  box-sizing: border-box;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+/* Table container with transparent background */
+.table-container {
+  width: 100%;
+  overflow-x: auto;
+  background-color: rgba(0, 0, 0, 0.4); /* semi-transparent dark overlay for clarity */
+  border-radius: 12px;
+  padding: 20px;
+  backdrop-filter: blur(5px); /* optional blur for better contrast */
+}
+
+/* Table styling */
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  color: white;       /* make text visible */
+  font-weight: bold;
+}
+
+.table th, .table td {
+  padding: 12px 15px;
+  text-align: left;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.table th {
+  font-size: 1.1rem;
+}
+
+.table td {
+  font-size: 1rem;
+}
+
+/* Icons inside table */
+.table td svg {
   color: white;
+  font-size: 1.2rem;
+  margin-right: 10px;
 }
 
-.App-link {
-  color: #61dafb;
+/* Add User button */
+.add-user-btn {
+  display: inline-block;
+  margin-bottom: 15px;
+  padding: 10px 20px;
+  font-weight: bold;
+  background-color: rgba(255, 255, 255, 0.8);
+  color: #000;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+/* Responsive adjustments */
+@media screen and (max-width: 768px) {
+  .table th, .table td {
+    font-size: 0.9rem;
   }
-  to {
-    transform: rotate(360deg);
+  .table td svg {
+    font-size: 1rem;
   }
 }
