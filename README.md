@@ -76,16 +76,16 @@ The dashboard updates dynamically, reflecting changes instantly in the UI.
 Screenshots:
 
 Dashboard View:
-![Dashboard View](frontend/screenshots/dashboard.png)
+![Dashboard View](frontend/screenshots/dashboard.jpg)
 
 Create User Page:
-![Create User Page](frontend/screenshots/create-user.png)
+![Create User Page](frontend/screenshots/create-user.jpg)
 
 Edit User Page:
-![Edit User Page](frontend/screenshots/edit-user.png)
+![Edit User Page](frontend/screenshots/edit-user.jpg)
 
 View User Page:
-![View User Page](frontend/screenshots/view-user.png)
+![View User Page](frontend/screenshots/view-user.jpg)
 
 Delete User Confirmation:
 ![Delete User Confirmation](frontend/screenshots/delete-user.png)
