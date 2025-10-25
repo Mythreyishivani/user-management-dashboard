@@ -88,7 +88,7 @@ View User Page:
 ![View User Page](frontend/screenshots/view-user.jpg)
 
 Delete User Confirmation:
-![Delete User Confirmation](frontend/screenshots/delete-user.png)
+![Delete User Confirmation](frontend/screenshots/delete-user.jpg)
 
 
 
