@@ -73,10 +73,23 @@ User information is stored in a PostgreSQL database, including details such as n
 The dashboard updates dynamically, reflecting changes instantly in the UI.
 
 
-Screenshots
+Screenshots:
 
+Dashboard View:
 ![Dashboard View](frontend/screenshots/dashboard.png)
+
+Create User Page:
 ![Create User Page](frontend/screenshots/create-user.png)
+
+Edit User Page:
+![Edit User Page](frontend/screenshots/edit-user.png)
+
+View User Page:
+![View User Page](frontend/screenshots/view-user.png)
+
+Delete User Confirmation:
+![Delete User Confirmation](frontend/screenshots/delete-user.png)
+
 
 
 
